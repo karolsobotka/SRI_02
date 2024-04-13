@@ -14,15 +14,15 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Employee {
+public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String firstName;
-    private String lastName;
-    private LocalDate birthDate;
-    private String job;
+    private String maker;
+    private String model;
+    private LocalDate releaseDate;
+    private String fuelType;
 
 
 }
