@@ -24,6 +24,5 @@ public class Car {
     private LocalDate releaseDate;
     private String fuelType;
 
-    private String test;
 
 }
