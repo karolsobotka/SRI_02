@@ -8,22 +8,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class Car {
+public class Maker {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String maker;
-    private String model;
-    private LocalDate releaseDate;
-    private String fuelType;
+    private String makerName;
 
-    private String test;
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }

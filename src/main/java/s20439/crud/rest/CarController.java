@@ -30,7 +30,8 @@ public class CarController {
     @GetMapping
     public ResponseEntity<Collection<CarDto>> getCars(){
         List<Car> allCars = carRepository.findAll();
-        List<CarDto> result = allCars.stream()
+        List<CarDto> result = allCars
+                .stream()
                 .map(this::convertToDto)
                 .collect(Collectors.toList());
         return new ResponseEntity<>(result, HttpStatus.OK);
